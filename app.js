@@ -1,7 +1,23 @@
-let date1 = new Date("04/20/2022").getTime();
-let date2 = new Date("12/05/2022").getTime();
+const addBtn = document.querySelector('.btn-add');
+const departDate = document.querySelector('.depart-date');
+const arrivalDate = document.querySelector('.arrival-date');
 
-let differenceInTime = date2 - date1;
-let differenceInDays = differenceInTime / (1000 * 60 * 60 * 24);
+// const showResult = () => {
 
-console.log(date1, date2, differenceInTime, Math.floor(differenceInDays));
+// };
+
+addBtn.addEventListener('click', () => {
+    let departDateVal = new Date(departDate.value).getTime();
+    let arrivalDateVal = new Date(arrivalDate.value).getTime();
+    let differenceInTime = arrivalDateVal - departDateVal;
+    let differenceInDays = Math.ceil(differenceInTime / (1000 * 60 * 60 * 24));
+
+    const resultContainer = document.querySelector('.show-result');
+    const createListContainer = document.createElement('ul');
+    createListContainer.innerHTML = `
+        
+    `;
+
+    // showResult();
+});
+
