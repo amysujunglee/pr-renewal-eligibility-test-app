@@ -23,13 +23,22 @@ addBtn.addEventListener('click', () => {
 
     resultContainer.append(createListContainer);
 
+    const showTotalDays = document.querySelector('.show-total-days');
+    showTotalDays.append(Number(differenceInDays))
+
     // showResult();
-
-    const addTotalDays = () => {
-        const totalDays = document.querySelectorAll('.total-days');
-        console.log(totalDays.textContent);
-    }
-
-    addTotalDays();
 });
+
+// const addTotalDays = () => {
+//     const totalDays = document.querySelectorAll('.total-days');
+
+//     console.log(totalDays);
+//     // let array = totalDays.map(days => {
+//     //     console.log(days);
+//     // });
+
+//     // console.log(array);
+// }
+
+addTotalDays();
 
