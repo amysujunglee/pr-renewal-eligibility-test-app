@@ -1,6 +1,7 @@
 const addBtn = document.querySelector('.btn-add');
 const departDate = document.querySelector('.depart-date');
 const arrivalDate = document.querySelector('.arrival-date');
+// const delBtn = document.querySelector('.btn-del');
 
 // const showResult = () => {
 
@@ -15,9 +16,20 @@ addBtn.addEventListener('click', () => {
     const resultContainer = document.querySelector('.show-result');
     const createListContainer = document.createElement('ul');
     createListContainer.innerHTML = `
-        
+        <li>Departure date: ${departDate.value}</li>
+        <li>Arrival date: ${arrivalDate.value}</li>
+        <li>Total days: <span class="total-days">${differenceInDays}</span>days</li>
     `;
 
+    resultContainer.append(createListContainer);
+
     // showResult();
+
+    const addTotalDays = () => {
+        const totalDays = document.querySelectorAll('.total-days');
+        console.log(totalDays.textContent);
+    }
+
+    addTotalDays();
 });
 
