@@ -1,11 +1,6 @@
 const addBtn = document.querySelector('.btn-add');
 const departDate = document.querySelector('.depart-date');
 const arrivalDate = document.querySelector('.arrival-date');
-// const delBtn = document.querySelector('.btn-del');
-
-// const showResult = () => {
-
-// };
 
 addBtn.addEventListener('click', () => {
     let departDateVal = new Date(departDate.value).getTime();
@@ -24,21 +19,15 @@ addBtn.addEventListener('click', () => {
     resultContainer.append(createListContainer);
 
     const showTotalDays = document.querySelector('.show-total-days');
-    showTotalDays.append(Number(differenceInDays))
+    if (differenceInDays) {
+        let array = [differenceInDays];
+        array.push(differenceInDays);
+        showTotalDays.append(Number(differenceInDays));
 
-    // showResult();
+        console.log(array);
+
+    } else {
+        console.log('error!');
+    }
+
 });
-
-// const addTotalDays = () => {
-//     const totalDays = document.querySelectorAll('.total-days');
-
-//     console.log(totalDays);
-//     // let array = totalDays.map(days => {
-//     //     console.log(days);
-//     // });
-
-//     // console.log(array);
-// }
-
-addTotalDays();
-
