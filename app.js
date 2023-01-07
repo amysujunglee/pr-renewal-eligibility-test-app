@@ -20,10 +20,13 @@ addBtn.addEventListener('click', () => {
 
     const showTotalDays = document.querySelector('.show-total-days');
     if (differenceInDays) {
-        let array = [differenceInDays];
+        let array = [];
+        document.querySelector('.total-days').map(days => {
+            array.push(days);
+        })
         showTotalDays.append(Number(differenceInDays));
 
-        console.log(typeof differenceInDays);
+        console.log(array);
 
         console.log(showTotalDays.innerText)
         totalDaysList = showTotalDays.innerText;
