@@ -21,13 +21,19 @@ addBtn.addEventListener('click', () => {
     const showTotalDays = document.querySelector('.show-total-days');
     if (differenceInDays) {
         let array = [differenceInDays];
-        array.push(differenceInDays);
         showTotalDays.append(Number(differenceInDays));
 
-        console.log(array);
+        console.log(typeof differenceInDays);
+
+        console.log(showTotalDays.innerText)
+        totalDaysList = showTotalDays.innerText;
 
     } else {
         console.log('error!');
     }
+
+    // let array = [];
+    // array.push(...differenceInDays)
+    // console.log(array);
 
 });
