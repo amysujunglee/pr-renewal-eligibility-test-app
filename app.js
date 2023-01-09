@@ -2,7 +2,8 @@ const addBtn = document.querySelector('.btn-add');
 const departDate = document.querySelector('.depart-date');
 const arrivalDate = document.querySelector('.arrival-date');
 const showTotalDays = document.querySelector('.show-total-days');
-const calculateTotalDays = document.querySelector('.btn-calculate-total-days');
+const calculateTotalDaysBtn = document.querySelector('.btn-calculate-total-days');
+const clearBtn = document.querySelector('.btn-clear')
 
 addBtn.addEventListener('click', () => {
     let departDateVal = new Date(departDate.value).getTime();
@@ -19,15 +20,26 @@ addBtn.addEventListener('click', () => {
     `;
 
     resultContainer.append(createListContainer);
+});
 
-    let sumTodalDays = 0;
+calculateTotalDaysBtn.addEventListener('click', () => {
+    let sumTotalDays = 0;
     document.querySelectorAll('.total-days').forEach(eachDays => {
         let daysToNumber = Number(eachDays.textContent);
-        sumTodalDays += daysToNumber;
+        sumTotalDays += daysToNumber;
     });
 
-    console.log(sumTodalDays);
-    calculateTotalDays.addEventListener('click', () => {
-        showTotalDays.append(`Total days: ${sumTodalDays}`);
-    })
+    showTotalDays.append(`Total days: ${sumTotalDays}days`);
+
+    if (sumTotalDays > 730) {
+        showTotalDays.append(`You left Canada for ${sumTotalDays} days so you are NOT eligible to renew your PR card.`);
+    } else {
+        showTotalDays.append(`You left Canada for ${sumTotalDays} days so you are eligible to renew your PR card.`)
+    }
+})
+
+clearBtn.addEventListener('click', () => {
+    const showResultContainer = document.querySelector('.show-result');
+    showResultContainer.innerHTML = '';
+    showTotalDays.innerHTML = '';
 });
