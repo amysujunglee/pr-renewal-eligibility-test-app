@@ -20,7 +20,7 @@ h1 {
 
 h2 {
     font-size: 1.5rem;
-    width: 750px;
+    width: 700px;
     margin: 0 auto;
 }
 
@@ -31,4 +31,8 @@ strong {
 .cic-info {
     width: 700px;
     margin: 2.5rem auto;
+}
+
+ul {
+    list-style: none;
 }
