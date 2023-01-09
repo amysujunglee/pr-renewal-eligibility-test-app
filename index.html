@@ -6,30 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Am I Eligible to Renew PR Card?</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@300;400;600&family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Am I eligible to renew my PR card in Canada?</h1>
-    <h2>If you want to renew your PR card in Canada, you must have been in Canada for at least <strong>730 days</strong> during the last five years. </h2>
-    <div>
-        <p>Time lived in Canada</p>
-        <p>To keep your permanent resident status, you must have been in Canada for at least 730 days during the last five years. These 730 days don’t need to be continuous. Some of your time abroad may count towards the 730 days.</p>
-        <p>Check CIC website to see more details.</p>
-        <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/new-immigrants/pr-card/who-can-apply.html">CIC website</a>
-    </div>
+    <main class="container text-center mt-5">
+        <h1>Am I eligible to renew my PR card in Canada?</h1>
+        <h2>If you want to renew your PR card in Canada, you must have been in Canada for at least <strong>730 days</strong> during the last five years. </h2>
+        <section class="cic-info">
+            <p>Time lived in Canada</p>
+            <p>To keep your permanent resident status, you must have been in Canada for at least 730 days during the last five years. These 730 days don’t need to be continuous. Some of your time abroad may count towards the 730 days.</p>
+            <p>Check CIC website to see more details. <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/new-immigrants/pr-card/who-can-apply.html" target="_blank">CIC website</a></p>
+            
+        </section>
+
+        <section>
+            <label>Departure</label>
+            <input type="date" class="depart-date">
+            <label>Arrival</label>
+            <input type="date" class="arrival-date">
+            <button class="btn-add">Add</button>
     
+            <div class="show-result"></div>
+            <div class="show-total-days"></div>
+    
+            <button class="btn-calculate-total-days">Calculate total days</button>
+            <button class="btn-clear">Clear days</button>
+        </section>
+    </main>
 
-    <label>Departure</label>
-    <input type="date" class="depart-date">
-    <label>Arrival</label>
-    <input type="date" class="arrival-date">
-    <button class="btn-add">Add</button>
-
-    <article class="show-result"></article>
-    <article class="show-total-days"></article>
-
-    <button class="btn-calculate-total-days">Calculate total days</button>
-    <button class="btn-clear">Clear days</button>
+    <footer>
+        <p class="text-center text-muted">&copy; Amy Lee, 2023</p>
+    </footer>
 
     <script src="app.js"></script>
 </body>
