@@ -21,7 +21,7 @@ JavaScript, HTML, CSS
 - Getting the total away days
   - Changed the date value to time value using `getTime()`
   - Total days: arrival date - departure date (in time)
-  - Changed the time value to date value again using `Math.ceil` and `1000*60*60*24`
+  - Changed the time value to date value again using `Math.ceil` and `1000 * 60 * 60 * 24`
 - Appending the final total days and message
   - Added 'Calculate total days' button and created a function for the button
 
@@ -32,7 +32,7 @@ JavaScript, HTML, CSS
 - [ ] Create a React version (for my React.js skill)
 
 ## Known issues (Work in progress)
-- [ ] When you keep clicking 'Calculate total days', it shows the exisitng total days and message over and over.
+- [ ] When you keep clicking 'Calculate total days' button, it shows the exisitng total days and message over and over.
 
 ## Find a bug?
 If you found an issue or would like to submit an improvement to this project, please submit an issue using the issues tab above. If you would like to submit a PR with a fix, reference the issue you created! Thank you ❤️
