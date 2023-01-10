@@ -30,12 +30,22 @@ calculateTotalDaysBtn.addEventListener('click', () => {
         sumTotalDays += daysToNumber;
     });
 
-    showTotalDays.append(`Total days: ${sumTotalDays}days`);
+    let totalDaysMsg = document.createElement('p');
+    totalDaysMsg.classList.add('total-days-msg');
+    totalDaysMsg.innerText = `Total days: ${sumTotalDays}days`;
+
+    showTotalDays.append(totalDaysMsg);
+
+    let passMsg = document.createElement('p');
+    passMsg.innerHTML = `You left Canada for ${sumTotalDays}days so you are <span class="eligible">eligible</span> to renew your PR card.`
+    
+    let failMsg = document.createElement('p');
+    failMsg.innerHTML = `You left Canada for ${sumTotalDays}days so you are <span class="notEligible">NOT eligible</span> to renew your PR card.`
 
     if (sumTotalDays > 730) {
-        showTotalDays.append(`You left Canada for ${sumTotalDays} days so you are NOT eligible to renew your PR card.`);
+        showTotalDays.append(failMsg);
     } else {
-        showTotalDays.append(`You left Canada for ${sumTotalDays} days so you are eligible to renew your PR card.`)
+        showTotalDays.append(passMsg)
     }
 })
 
@@ -44,3 +54,7 @@ clearBtn.addEventListener('click', () => {
     showResultContainer.innerHTML = '';
     showTotalDays.innerHTML = '';
 });
+
+//copyright year
+const copyrightDate = document.querySelector("#copyright-date");
+copyrightDate.innerHTML = new Date().getFullYear();
