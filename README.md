@@ -1,5 +1,4 @@
 <a name="readme-top"></a>
-
 # PR Renewal Eligibility Test App
 A test app to calculate how many days the user was away from Canada and show if the user is eligible to renew the PR card.
 <br>
