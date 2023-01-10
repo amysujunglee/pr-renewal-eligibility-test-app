@@ -1,6 +1,6 @@
 # PR Renewal Eligibility Test App
-## A test app to calculate how many days the user was away from Canada and show if the user is eligible to renew the PR card.
-
+A test app to calculate how many days the user was away from Canada and show if the user is eligible to renew the PR card.
+<br>
 In Canada 🇨🇦, every permanent resident should renew his/her PR card every 5 years. To be eligible for a PR card renewal, the person must have been in Canada for at least 730 days during the last five years. Thus, the test app calculates the total days of leaving the country and determines if the person is eligible for a PR card renewal.
 
 ## Languages
