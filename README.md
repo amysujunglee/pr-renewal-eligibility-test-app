@@ -9,6 +9,3 @@ HTML, CSS, JavaScript
 
 ## Improvements
 - 
-
-
-![image](https://user-images.githubusercontent.com/39070747/211461107-529025b3-7fb0-4e58-af14-22b905e92dbc.png)
