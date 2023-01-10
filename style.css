@@ -24,6 +24,17 @@ h2 {
     margin: 0 auto;
 }
 
+ul {
+    list-style: none;
+}
+
+input,
+button {
+    padding: 0.5rem;
+    border-radius: 0;
+    border: 1px solid #555;
+}
+
 strong {
     color: #d40000;
 }
@@ -33,6 +44,6 @@ strong {
     margin: 2.5rem auto;
 }
 
-ul {
-    list-style: none;
+.btns {
+    margin-top: 2rem;
 }

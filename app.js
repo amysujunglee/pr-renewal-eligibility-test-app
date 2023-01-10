@@ -1,7 +1,8 @@
-const addBtn = document.querySelector('.btn-add');
 const departDate = document.querySelector('.depart-date');
 const arrivalDate = document.querySelector('.arrival-date');
 const showTotalDays = document.querySelector('.show-total-days');
+
+const addBtn = document.querySelector('.btn-add');
 const calculateTotalDaysBtn = document.querySelector('.btn-calculate-total-days');
 const clearBtn = document.querySelector('.btn-clear')
 
